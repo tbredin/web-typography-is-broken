@@ -4,9 +4,14 @@
 // toggle debug
 $debug-allow: false;
 
+@import "susy";
+@import "megatype";
+
 // import site base
 @import "base/reset";
-@import "base/variables";
+@import "base/config";
+@import "base/config-megatype";
+@import "base/config";
 @import "base/webfonts";
 @import "base/mixins";
 @import "base/typography";

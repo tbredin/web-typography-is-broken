@@ -1,13 +1,14 @@
-@@include('partials/_head.html')
+{% include "partials/head.html" %}
     <body>
-        @@include('partials/_unsupported-browser.html')
+        {% include "partials/unsupported-browser.html" %}
 
         <div class="page">
             <div class="main-content">
-                @@include('partials/_slides.html')
+                {% block content %}
+                {% endblock %}
             </div>
         </div>
 
-        @@include('partials/_scripts.html')
+        {% include "partials/scripts.html" %}
     </body>
 </html>

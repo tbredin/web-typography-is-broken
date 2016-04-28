@@ -1,0 +1,80 @@
+// ===================================
+// Colors
+// ===================================
+
+// colors
+$palettes: (
+    blue: (
+        base: #3a5ca4
+    ),
+    yellow: (
+        base: #fac011
+    ),
+    green: (
+        base: #96d152
+    ),
+    purple: (
+        base: #8232d2,
+        light: #a974dd,
+        dark: #481d74
+    ),
+    red: (
+        base: #e4545c
+    ),
+    rose: (
+        base: #f54848
+    ),
+    grey: (
+        base: #f1f8fa
+    ),
+    steel: (
+        base: #4b4c57,
+        light: #707287
+    ),
+    white: (
+        base: #fff
+    )
+);
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// debug grids
+$debug-color: #444;
+
+//interior gutters
+$gutter: 1rem;
+
+// // susy settings
+// $susy: (
+//     global-box-sizing: content-box,
+//     math: fluid,
+//     container-position: $gutter,
+//     debug: (
+//         color: transparentize($debug-color,0.6)
+//     ),
+//     use-custom: (
+//         rem: true
+//     )
+// );
+
+// $base-font-size: 16px;
+
+// // breakpoint count
+// $breakpoint-count: length(map-keys($breakpoint-map));
+
+// // breakpoint names
+// $breaks: map-keys($breakpoint-map);
+
+// // rootsizes
+// $sizes: map-values($rootsizes);
+
+// // set the initial breakpoint information referenced by type mixins
+// $current-breakpoint: break-0;
+// $current-root: map-get($rootsizes, break-0);
+
+// animations
+$face-blink: true;
+$face-animate-emote: true;
+$feedback-faces-exist: false;

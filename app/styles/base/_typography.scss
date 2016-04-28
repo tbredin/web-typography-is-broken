@@ -9,64 +9,43 @@ html {
 // Site-wide base styles.
 body {
     line-height: 2rem;
-    font-family: font-family-of($body-type);
+    font-family: font-family-of($sans);
     font-style: normal;
-    font-weight: regular-of($body-type);
+    font-weight: regular-of($sans);
 }
 
 // Links.
 a {
-    color: site-color(blue);
+    color: palette(blue);
     text-decoration: none;
     // Nice underlines for text links.
     @extend %link-style;
 
     &:hover, &:active, &:focus {
-        color: lighten(site-color(blue), 5%);
+        color: lighten(palette(blue), 5%);
         text-decoration: none;
     }
 }
 
 %link-style {
-    @include text-link(site-color(blue));
+    @include text-link(palette(blue));
 }
 
-%typeset {
-    position: relative;
-
-    @if ($debug-baseline == true and $debug-allow == true) {
-        &:after {
-            // Demo baseline grid styles
-            content: "";
-            display: block;
-            pointer-events: none;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to bottom,rgba(50,50,50, 0.2)0,rgba(50,50,50, 0.2)1px,rgba(255, 255, 255, 0.3)1px,rgba(255, 255, 255, 0)2px, rgba(50,50,50, 0.0)1rem, rgba(50,50,50, 0.1)1rem,rgba(50,50,50, 0.1)1.05rem,rgba(255, 255, 255, 0.1)1.05rem,rgba(255, 255, 255, 0)1.125rem);
-            background-size: 100% 2rem;
-            z-index: 1000;
-        }
-    }
-}
 
 %inherit-type {
     font-size: inherit;
-    @include type-match;
 }
 
 // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
 p, li {
     font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-    font-family: font-family-of($body-type);
+    font-family: font-family-of($sans);
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    color: site-color(steel);
+    color: palette(steel);
     -webkit-font-smoothing: antialiased;
-    @include type($body-type, 1.5rem, 2, 0, 1);
+    @include typeset($sans, 1.5rem, 2, 0, 1);
     text-align: center;
     color: #fff;
 }
@@ -79,51 +58,52 @@ p + p {
 h1, h2, h3, h4, h5, h6 {
     font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     color: #fff;
-    font-family: font-family-of($display-type);
+    font-family: font-family-of($display);
     -webkit-font-smoothing: antialiased;
-    font-style: regular-of($body-type);
+    font-style: regular-of($sans);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 
     a {
         @include text-link(#fff);
-        @include type-match;
     }
 }
 
 // Heading level 1.
 h1, .h1-style {
-    @include type($font: $display-type, $fontsize: 3.5rem, $lineheight: 4, $leader: 1, $trailer: 2, $scale-ratio: 10/7);
+    @include typeset($font: $display, $fontsize: 3.5rem, $lineheight: 4, $leader: 1, $trailer: 2);
 }
 
 // Heading level 2.
 h2, .h2-style {
-    @include type($body-type, 2.375rem, 3, 1, 1);
+    @include typeset($sans, 2.375rem, 3, 1, 1);
+    font-family: font-family-of($sans);
+
 }
 
 // Heading level 3.
 h3, .h3-style {
     font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    font-family: font-family-of($body-type);
+    font-family: font-family-of($sans);
     -webkit-font-smoothing: antialiased;
     font-style: normal;
-    @include type($body-type, 2rem, 3, 1, 1);
+    @include typeset($sans, 2rem, 3, 1, 1);
 }
 
 // Heading level 4.
 h4, .h4-style {
-    @include type($body-type, 1.75rem, 3, 1, 1);
+    @include typeset($sans, 1.75rem, 3, 1, 1);
 }
 
 // Heading level 5.
 h5, .h5-style {
-    @include type($body-type, 1.5rem, 3, 1, 1);
+    @include typeset($sans, 1.5rem, 3, 1, 1);
 }
 
 // Heading level 6.
 h6, .h6-style {
-    @include type($body-type, 1.35rem, 2, 1, 1);
+    @include typeset($sans, 1.35rem, 2, 1, 1);
 }
 
 // Lists.
@@ -154,20 +134,20 @@ li {
 
 // Bold.
 b, strong {
-    font-weight: bold-of($body-type);
+    font-weight: bold-of($sans);
 }
 
 // Italic.
 em, i {
-    font-style: italic-of($body-type);
+    font-style: italic-of($sans);
 }
 
 // Caption and inline small text.
 small, .caption {
-    font-family: font-family-of($body-type);
+    font-family: font-family-of($sans);
     -webkit-font-smoothing: antialiased;
     font-style: normal;
-    font-weight: regular-of($body-type);
+    font-weight: regular-of($sans);
     // @include fontsize(12);
     letter-spacing: -0.035em;
 }
@@ -177,7 +157,7 @@ small {
 }
 
 .caption {
-    color: site-color(steel);
+    color: palette(steel);
     // @include baseline(12, $headingtype, 2, 2);
 }
 
@@ -190,11 +170,11 @@ h1 + .caption, h2 + .caption, h3 + .caption {
 blockquote {
 
     p {
-        font-style: italic-of($body-type);
+        font-style: italic-of($sans);
         padding-left: 1rem;
-        border-left: 0.1rem solid site-color(steel);
-        color: site-color(steel);
-        @include type($display-type, 1.5rem, 2, 2, 2);
+        border-left: 0.1rem solid palette(steel);
+        color: palette(steel);
+        @include typeset($display, 1.5rem, 2, 2, 2);
     }
 }
 
@@ -212,7 +192,7 @@ hr {
 
 // Code block.
 code, pre {
-    background-color: site-color(steel);
+    background-color: palette(steel);
     color: #fff;
     font-family: font-family-of($monospace-type);
 }
@@ -235,9 +215,9 @@ code {
 
 input[type=text],
 textarea {
-    font-family: font-family-of($body-type);
+    font-family: font-family-of($sans);
     text-align: left;
-    color: site-color(steel);
+    color: palette(steel);
     -webkit-font-smoothing: antialiased;
     font-size: 1.25rem;
     background-color: #fff;

@@ -36,8 +36,8 @@ $(function() {
 
     // breakpoints
     // IMPORTANT: don't forget to update if css changes!
-    var break1 = "screen and (min-width: 47.9375em)";
-    var break2 = "screen and (min-width: 80em)";
+    // var break1 = "screen and (min-width: 47.9375em)";
+    // var break2 = "screen and (min-width: 80em)";
 
     var $window = $(window);
     var $body = $('body');
@@ -62,66 +62,35 @@ $(function() {
         frameHeight,
         framedIndex;
 
-    // velocity sequence objects - set up your animations below
-    // var animateNavOut = [
-    //     {
-    //         elements: $navCloneWrap,
-    //         properties: {
-    //             translateZ: 0,
-    //             translateY: ['-50px', 0]
-    //         }, options: {
-    //             duration: 290,
-    //             easing: 'easeInQuint',
-    //         }
-    //     }, {
-    //         elements: $navBadge,
-    //         properties: {
-    //             translateZ: 0,
-    //             translateY: ['-100px', 0]
-    //         }, options: {
-    //             duration: 240,
-    //             easing: 'easeInQuint',
-    //             delay: 65,
-    //             sequenceQueue: false
-    //         }
-    //     }
-    // ];
-
     // scrolljacking
-
     $('.container').fullpage({
         sectionSelector: '.frame',
         easing: 'easeInOutQuart'
     });
 
 
-    // get base font size of html - will be rems
-    function getBaseSize() {
-        baseSize = $html.css('font-size');
-    }
+    // // get base font size of html - will be rems
+    // function getBaseSize() {
+    //     baseSize = $html.css('font-size');
+    // }
 
-    // calculate nearest whole rem unit from a pixel value (rounding up)
-    function getRem(px) {
-        return parseInt(px) / parseInt(baseSize);
-    };
+    // // calculate nearest whole rem unit from a pixel value (rounding up)
+    // function getRem(px) {
+    //     return parseInt(px) / parseInt(baseSize);
+    // };
 
-    // height of full screen frames
-    function getFrameHeight(frame) {
-        return frame.find('.contained').outerHeight();
-    }
+    // // height of full screen frames
+    // function getFrameHeight(frame) {
+    //     return frame.find('.contained').outerHeight();
+    // }
 
-    function getScrollY() {
-        scrollY = $window.scrollTop();
-    };
+    // function getScrollY() {
+    //     scrollY = $window.scrollTop();
+    // };
 
     $toNextFrame.on('click', function() {
         $.fn.fullpage.moveSectionDown();
     });
-
-    // // index of screen-sized frames
-    // function buildFramedIndex() {
-    //     frameHeight = $window.height();
-    // };
 
     // scroll to an element
     function scrollToElement(element) {

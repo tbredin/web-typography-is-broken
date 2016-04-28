@@ -18,16 +18,16 @@ svg {
 }
 
 ::placeholder {
-    color: site-color(rose);
+    color: palette(rose);
     transition: color 0.25s ease;
 }
 
 :hover::placeholder {
-    color: lighten(site-color(rose), 10%);
+    color: lighten(palette(rose), 10%);
 }
 
 :focus::placeholder {
-    color: site-color(rose);
+    color: palette(rose);
 }
 
 nav li {
@@ -37,9 +37,8 @@ nav li {
 
 .container {
     @include set-container;
-    @extend %typeset;
 }
 
 .page {
-    background-color: site-color(rose);
+    background-color: palette(rose);
 }

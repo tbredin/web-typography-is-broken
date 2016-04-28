@@ -17,7 +17,7 @@ gulp.task('icons:rename', function() {
       .pipe(gulp.dest("."));
 });
 
-gulp.task('build', ['images', 'icons', 'icons:rename', 'styles', 'vendor', 'scripts', 'modernizr', 'fonts']);
+gulp.task('build', ['images', 'icons', 'icons:rename', 'styles', 'templates', 'vendor', 'scripts', 'modernizr', 'fonts']);
 
 gulp.task('default', ['build']);
 
