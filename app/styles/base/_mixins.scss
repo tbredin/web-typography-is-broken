@@ -1,0 +1,77 @@
+
+@mixin draw-arrow($color: #fff, $dir: bottom, $length: 5rem, $stem-width: 22%, $arrow-size: 1em) {
+    $stem-start: 50% - $stem-width / 2;
+    $stem-end: 50% + $stem-width / 2;
+
+    display: block;
+    // text-indent: -999em;
+    margin: 0 auto;
+    position: relative;
+    transform: translateZ(0);
+
+    &:focus {
+        outline: 0 none;
+    }
+
+    @if $dir == top or $dir == bottom {
+        height: $length;
+        transition: height 0.4s ease !important;
+        width: $arrow-size;
+        background: linear-gradient(to left, transparent 0%, transparent $stem-start, $color $stem-start, $color $stem-end, transparent $stem-end, transparent 100%)!important;
+        background-size: 100% 2px!important;
+        background-repeat: repeat-y!important;
+    } @else {
+        width: $length;
+        transition: width 0.4s ease !important;
+        height: $arrow-size;
+        background: linear-gradient(to bottom, transparent 0%, transparent $stem-start, $color $stem-start, $color $stem-end, transparent $stem-end, transparent 100%)!important;
+        background-size: 2px 100%!important;
+        background-repeat: repeat-x!important;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+
+        // construct triangle
+        // setup
+        border-width: $arrow-size / 2;
+        border-style: solid;
+        border-color: transparent;
+
+        @if $dir == top or $dir == bottom {
+            left: 49%;
+            transform: translateX(-50%);
+        } @else {
+            top: 49%;
+            transform: translateY(-50%);
+        }
+
+        // set triangle direction
+        @if $dir == bottom {
+            top: 100%;
+            border-top-color: $color;
+            border-bottom-width: 0;
+        } @else if $dir == top {
+            bottom: 100%;
+            border-bottom-color: $color;
+            border-top-width: 0;
+        } @else if $dir == right {
+            right: 100%;
+            border-right-color: $color;
+            border-left-width: 0;
+        } @else if $dir == left {
+            left: 100%;
+            border-left-color: $color;
+            border-right-width: 0;
+        }
+    }
+
+    &:hover {
+        @if $dir == top or $dir == bottom {
+            height: $length * 1.2;
+        } @else {
+            width: $length * 1.2;
+        }
+    }
+}

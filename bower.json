@@ -1,0 +1,15 @@
+{
+  "name": "megatype-slides",
+  "private": false,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0"
+  },
+  "devDependencies": {
+    "scut": "~0.10.4",
+    "base64": "~0.3.0",
+    "velocity": "~1.1.0",
+    "fullpage.js": "~2.4.3",
+    "megatype": "~1.0.7"
+  }
+}
