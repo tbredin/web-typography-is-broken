@@ -65,7 +65,10 @@ $(function() {
     // scrolljacking
     $('.container').fullpage({
         sectionSelector: '.frame',
-        easing: 'easeInOutQuart'
+        easing: 'step',
+        navigation: true,
+        navigationPosition: 'top',
+        scrollingSpeed: 400,
     });
 
 

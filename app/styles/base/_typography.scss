@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Heading level 1.
 h1, .h1-style {
-    @include typeset($font: $display, $fontsize: 3.5rem, $lineheight: 4, $leader: 1, $trailer: 2);
+    @include typeset($display, 3.5rem, 5, 1, 3);
 }
 
 // Heading level 2.
@@ -192,9 +192,14 @@ hr {
 
 // Code block.
 code, pre {
-    background-color: palette(steel);
+    background-color: transparentize(palette(steel), 0.75);
+    border: 0.0625em solid transparentize(palette(steel), 0.875);
     color: #fff;
     font-family: font-family-of($monospace-type);
+    padding: 0.125em;
+    margin: 0 0.125em;
+    border-radius: 0.25em;
+
 }
 
 pre {

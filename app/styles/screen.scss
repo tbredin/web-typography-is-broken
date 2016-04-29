@@ -20,3 +20,7 @@ $debug-allow: false;
 // Import all modules
 @import "modules/frame";
 @import "modules/next-arrow";
+@import "modules/fp-nav";
+
+// vendor
+@import "vendor/jquery.fullPage";
