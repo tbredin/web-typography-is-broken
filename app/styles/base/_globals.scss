@@ -1,6 +1,7 @@
+
 html, body {
     margin: 0;
-    background-color: #fff;
+    // text-align:
 }
 
 img {
@@ -43,4 +44,8 @@ nav li {
 
 .page {
     background-color: palette(rose);
+}
+
+iframe {
+    margin: 3rem 0 0;
 }

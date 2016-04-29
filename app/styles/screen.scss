@@ -1,14 +1,13 @@
-/* CSS compiled from SCSS */
-/* --------------------------------------- */
-
 // toggle debug
 $debug-allow: false;
+
+// reset
+@import "base/reset";
 
 @import "susy";
 @import "megatype";
 
 // import site base
-@import "base/reset";
 @import "base/config";
 @import "base/config-megatype";
 @import "base/config";

@@ -71,8 +71,12 @@
                 }
 
                 &.active {
-                    span {
-                        opacity: 1;
+                    &,
+                    &:hover,
+                    &:focus {
+                        span {
+                            opacity: 1;
+                        }
                     }
                 }
 

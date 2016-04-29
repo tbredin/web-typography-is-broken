@@ -6,6 +6,7 @@
     cursor: pointer;
     transition: all 0.5s ease!important;
     z-index: 1000;
+    display: none;
 
     &:hover {
         transform: translateY(1.225rem);

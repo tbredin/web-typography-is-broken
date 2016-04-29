@@ -69,6 +69,7 @@ $(function() {
         navigation: true,
         navigationPosition: 'top',
         scrollingSpeed: 400,
+        fitToSectionDelay: 100
     });
 
 
@@ -91,8 +92,10 @@ $(function() {
     //     scrollY = $window.scrollTop();
     // };
 
-    $toNextFrame.on('click', function() {
-        $.fn.fullpage.moveSectionDown();
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('#fp-nav').length) {
+          $.fn.fullpage.moveSectionDown();
+        }
     });
 
     // scroll to an element
