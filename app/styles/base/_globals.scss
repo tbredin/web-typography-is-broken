@@ -49,3 +49,15 @@ nav li {
 iframe {
     margin: 1rem 0 0;
 }
+
+h1 {
+    &:after {
+        transform: translateY(0.0625em);
+    }
+}
+
+h2 {
+    &:after {
+        transform: translateY(0.0375em);
+    }
+}
