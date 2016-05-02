@@ -56,7 +56,7 @@ $debug-type: true;
 
 // // enable responsive baseline & type scaling.
 // // increases root font size from each breakpoint, starting from the min size specified in $rootsizes below
-// $baseline-scaling: false !default;
+$baseline-scaling: false;
 
 // // enable formal baseline grid
 // // snaps all type to the baseline grid
@@ -140,14 +140,14 @@ $sans: (
     regular: 100,
     bold: normal,
     italic: italic,
-    cap-height: 0.62
+    cap-height: 0.72
 );
 
 $display: (
     font-family: '"Polaris", Helvetica, Airal, sans-serif',
     regular: 400,
     bold: bold,
-    cap-height: 0.76
+    cap-height: 0.81
 );
 
 $monospace-type: (
