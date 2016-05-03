@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 
     a {
-        @include text-link(#fff);
+        @include text-link(#fff, $offset: 8px);
     }
 }
 
@@ -81,6 +81,9 @@ h2, .h2-style {
     @include typeset($sans, 2.375rem, 3, 0, 2);
     font-family: font-family-of($sans);
 
+    a {
+
+    }
 }
 
 // Heading level 3.
@@ -131,6 +134,10 @@ li {
     // @include breakpoint(break-1) {
     //     margin-left: 0;
     // }
+
+    a {
+        @include text-link(#fff, $offset: 4px);
+    }
 }
 
 // Bold.

@@ -50,6 +50,12 @@
             height: 0.5rem !important;
             top: 0;
 
+            &:before,
+            &:after {
+                display: none !important;
+                content: none !important;
+            }
+
             a {
                 position: absolute !important;
                 top: 0;
