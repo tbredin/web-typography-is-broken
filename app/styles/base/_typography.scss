@@ -80,10 +80,6 @@ h1, .h1-style {
 h2, .h2-style {
     @include typeset($sans, 2.25rem, 3, 0, 2);
     font-family: font-family-of($sans);
-
-    a {
-
-    }
 }
 
 // Heading level 3.
@@ -123,6 +119,10 @@ ul {
     }
 }
 
+a {
+    background-size: 2px 0.1em !important;
+}
+
 ol {
     padding-left: 1.25rem;
 }
@@ -136,7 +136,7 @@ li {
     // }
 
     a {
-        @include text-link(#fff, $offset: 4px);
+        @include text-link(#fff, $offset: 8px);
     }
 }
 
