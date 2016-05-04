@@ -48,7 +48,7 @@ p, li {
     margin-right: auto;
     color: palette(steel);
     -webkit-font-smoothing: antialiased;
-    @include typeset($sans, 1.5rem, 2, 0, 1);
+    @include typeset($sans, 2.25rem, 3, 0, 1);
     color: #fff;
 }
 
@@ -78,7 +78,7 @@ h1, .h1-style {
 
 // Heading level 2.
 h2, .h2-style {
-    @include typeset($sans, 2.375rem, 3, 0, 2);
+    @include typeset($sans, 2.25rem, 3, 0, 2);
     font-family: font-family-of($sans);
 
     a {

@@ -1,14 +1,22 @@
 <a href="#" class="next-arrow js-next-frame"></a>
 
 <div class="container">
-    <div class="frame">
+    <div class="frame is-large">
         <div class="contained">
             <h1>A Jolly Web Typesetting Adventure</h1>
-            <h2>Web Typography is broken: here's how we can fix it</h2>
+            <h2>Web Typography is broken: here&rsquo;s how we can fix it</h2>
         </div>
     </div>
 
     <div class="frame">
+        <div class="contained">
+            <h1>Thomas Bredin-Grey</h1>
+            <h2>Lead Front End Developer</h2>
+            <img src="images/logo-thick.svg" alt="Thick" class="logo_thick">
+        </div>
+    </div>
+
+{#     <div class="frame">
         <div class="contained">
             <h1>What?</h1>
             <ul>
@@ -18,17 +26,20 @@
                 <li>The future</li>
             </ul>
         </div>
-    </div>
+    </div> #}
 
-    <div class="frame">
+    <div class="frame is-large is-centered has-image-bg">
         <div class="contained">
             <h1>Why should we care?</h1>
+        </div>
+        <div class="frame__img">
+            <img src="images/dog-no-care2.jpg" alt="why">
         </div>
     </div>
 
     <div class="frame">
         <div class="contained">
-            <h1>It's about the users</h1>
+            <h1>It&rsquo;s about the users</h1>
             <h2>How can we improve the traversability of content in a layout?</h2>
             {# how? 2 ways: type, and grids to add structure to our type #}
         </div>
@@ -37,8 +48,20 @@
     <div class="frame">
         <div class="contained">
             <h1>The web is 95% typography</h1>
-            <h2>We spend a lot of time setting type, but we don't talk about it much</h2>
+            <h2>We spend a lot of time setting type, but we don&rsquo;t talk about it much</h2>
             {# 1: type #}
+        </div>
+    </div>
+
+    <div class="frame">
+        <div class="contained">
+            <img src="images/meetup.png" alt="meetup">
+        </div>
+    </div>
+
+    <div class="frame">
+        <div class="contained">
+            <img src="images/medium.png" alt="medium">
         </div>
     </div>
 
@@ -63,8 +86,12 @@
     <div class="frame">
         <div class="contained">
             <h1>CSS <code>line-height</code> sucks.</h1>
-            <h2>It adds vertical space around text.<br>Isn't this what margins are for?</h2>
-            <iframe style="width: 100%; height: 14rem" src="http://codepen.io/tbredin/embed/mPVQQG/?height=268&amp;theme-id=0&amp;default-tab=result" width="320" height="268" frameborder="no" scrolling="no"></iframe>
+            <h2>It adds vertical space around text.<br>Isn&rsquo;t this what margins are for?</h2>
+
+            <div class="spooky">
+                <h3>The Spooky Box</h3>
+                <p>The dimensions of type on the web are defined by a combination of font-size and line-height - there&rsquo;s no concept of a typographic baseline.</p>
+            </div>
             {# this makes it hard to build our baseline grid #}
         </div>
     </div>
@@ -83,9 +110,12 @@
         </div>
     </div>
 
-    <div class="frame">
+    <div class="frame is-large is-centered has-image-bg">
         <div class="contained">
             <h1>Notable tools</h1>
+        </div>
+        <div class="frame__img">
+            <img src="images/tools.jpg" alt="tools">
         </div>
     </div>
 
@@ -93,7 +123,8 @@
         <div class="contained">
             <h1>Compass Vertical Rhythm
             <h2>You had one job</h2>
-            <iframe height='360' scrolling='no' src='//codepen.io/tbredin/embed/eZmGyZ/?height=360&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+            <img src="images/compass.png" alt="compass example">
+            {# <iframe height='360' scrolling='no' src='//codepen.io/tbredin/embed/eZmGyZ/?height=360&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe> #}
         </div>
     </div>
 
@@ -101,7 +132,8 @@
         <div class="contained">
             <h1>Sassline</h1>
             <h2>Modern, but not entirely natural</h2>
-            <iframe height='360' scrolling='no' src='//codepen.io/tbredin/embed/xVQVVQ/?height=360&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+            {# <iframe height='360' scrolling='no' src='//codepen.io/tbredin/embed/xVQVVQ/?height=360&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe> #}
+            <img src="images/sassline.png" alt="sassline example">
         </div>
     </div>
 
@@ -113,9 +145,12 @@
         </div>
     </div>
  #}
-    <div class="frame">
+    <div class="frame is-large is-centered has-image-bg">
         <div class="contained">
             <h1>Something new</h1>
+        </div>
+        <div class="frame__img">
+            <img src="images/dog.jpg" alt="dog">
         </div>
     </div>
 
@@ -124,7 +159,7 @@
             <h1>Best practises</h1>
             <ul>
                 <li>Type is best set in rems or ems. Depending on context</li>
-                <li>Pixels aren't flexible (literally)</li>
+                <li>Pixels aren&rsquo;t flexible (literally)</li>
                 <li>Line height is best expressed unitless</li>
                 <li>Tool output should be predictable</li>
                 <li>Tool output should leave predictable options for workarounds</li>
@@ -159,8 +194,8 @@
             <h1>Fluid type / Baseline snap</h1>
             <img src="images/scaling-and-baseline.png" alt="Scaling / Baseline" class="img_code">
             <ul>
-                <li>Scale type smoothly between breakpoints / or don't</li>
-                <li>Snap all type to a baseline grid / or don't</li>
+                <li>Scale type smoothly between breakpoints / or don&rsquo;t</li>
+                <li>Snap all type to a baseline grid / or don&rsquo;t</li>
             </ul>
         </div>
     </div>
@@ -198,23 +233,24 @@
     <div class="frame">
         <div class="contained">
             <h1>Install as a package</h1>
-            <h2>npm install megatype --save-dev<br>bower install megatype --save-dev</h2>
             <img src="images/package.png" alt="typeset" class="img_code">
         </div>
     </div>
 
-    <div class="frame">
+    <div class="frame is-large is-centered has-image-bg">
         <div class="contained">
             <h1>The future</h1>
+        </div>
+        <div class="frame__img">
+            <img src="images/future.gif" alt="future">
         </div>
     </div>
 
     <div class="frame">
         <div class="contained">
-            <h1>Feature requests</h1>
+            <h1>Contribute!</h1>
             <ul>
-                <li>Local grids, using em?</li>
-                <li>Align buttons?</li>
+                <li></li>
             </ul>
         </div>
     </div>
@@ -235,7 +271,7 @@
 
     <div class="frame">
         <div class="contained">
-            <h1>It's up to us</h1>
+            <h1>It&rsquo;s up to us</h1>
         </div>
     </div>
 
